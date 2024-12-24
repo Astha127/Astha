@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - Cozy Coffee Shop</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body style="background-image: url('back.jpg'); background-size: cover;background-position: center;">
+    <div class="confirmation">
+        <h2>Thank You for Your Order!</h2>
+        <p id="order-details"></p>
+        <p>Your order will be prepared shortly and delivered to you soon.</p>
+        <button onclick="window.location.href='111.html'">Back to Home</button>
+    </div>
+
+    <script>
+        const productName = localStorage.getItem('productName');
+        const quantity = localStorage.getItem('quantity');
+        const totalAmount = localStorage.getItem('totalAmount');
+
+        document.getElementById('order-details').innerText = `You purchased ${quantity} ${productName}(s) for a total of ₹${totalAmount}.`;
+    </script>
+</body>
+</html>
